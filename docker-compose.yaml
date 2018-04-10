@@ -1,0 +1,15 @@
+version: '2.2'
+services:
+  oficina:
+    image: oficina-docker:aula2-volumes
+    container_name: aula-2
+    build: .
+    ports:
+     - 5000:5000
+    volumes:
+     -  .:/usr/src
+     - aula2-logs:/tmp
+
+volumes:
+  aula2-logs:
+    external: true
