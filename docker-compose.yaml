@@ -1,5 +1,9 @@
 version: '2.2'
 services:
+  web:
+    image: nginx:alpine
+    container_name: aula2-web
+
   oficina:
     image: oficina-docker:aula2-volumes
     container_name: aula-2
